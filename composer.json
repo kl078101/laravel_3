@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "barryvdh/laravel-debugbar": "^3.4",
         "caouecs/laravel-lang": "~5.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.18.35",
@@ -38,6 +39,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/helpers.php"
         ]
     },
     "autoload-dev": {
