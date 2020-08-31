@@ -17,4 +17,9 @@ class AdminUser extends Authenticatable
     const NORMAL = 1; //可用，可以登陆
     const BAN = 0; //禁用，不可以登陆
 
+    //状态访问器
+    public function getStateTextAttribute(){
+        return config('project.admin.state')[ $this->state ];
+    }
+
 }
