@@ -16,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //系统设置绑定单例模式
+        $this->app->singleton('App\Models\Setting', function ($app) {
+            return new \App\Models\Setting();
+        });
     }
 
     /**

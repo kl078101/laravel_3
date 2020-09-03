@@ -16,7 +16,7 @@
     @csrf
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label text-right">用户名</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <input type="text" class="form-control" name='username'  value="{{old('username',$adminuser->username)}}">
             @error('username')
             <small class='form-text text-danger'>{{$message}}</small>
@@ -25,7 +25,7 @@
     </div>
     <div class="form-group row">
         <label for="inputPassword3" class="col-sm-2 col-form-label text-right">密码</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <input type="password" class="form-control" name='password' value="{{old('password')}}" >
             @error('password')
             <small class='form-text text-danger'>{{$message}}</small>
@@ -34,7 +34,7 @@
     </div>
     <div class="form-group row">
         <label for="inputPassword3" class="col-sm-2 col-form-label text-right">确认密码</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <input type="password" class="form-control" name='password2' value="{{old('password2')}}" >
         </div>
     </div>

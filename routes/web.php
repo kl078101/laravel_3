@@ -34,9 +34,15 @@ Route::prefix('admin')->group(function () {
         Route::prefix('adminuser')->group(function () {
             Route::get('/', 'AdminUserController@index')->name('admin.adminuser');
             Route::get('add/{adminuser?}', 'AdminUserController@add')->name('admin.adminuser.add');
-            Route::post('add/{adminuser?}', 'AdminUserController@save')->name('admin.adminuser.save');
+            Route::post('add/{adminuser?}', 'AdminUserController@save')->name('admin.adminuser.add');
             Route::get('remove/{adminuser}', 'AdminUserController@remove')->name('admin.adminuser.remove');
             Route::get('state/{adminuser}', 'AdminUserController@state')->name('admin.adminuser.state');
+        });
+
+        //系统设置路由分组
+        Route::prefix('setting')->group(function () {
+            Route::get('/', 'SettingController@index')->name('admin.setting');
+            Route::post('/', 'SettingController@save')->name('admin.setting');
         });
 
     });
